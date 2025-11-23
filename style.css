@@ -1,0 +1,75 @@
+/* style.css */
+
+/* --- GENERAL LAYOUT --- */
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background-color: #f7f7f7;
+}
+
+h1 {
+    color: #db0719;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+}
+
+p {
+    color: #555;
+}
+
+/* --- INPUTS & BUTTONS --- */
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Includes padding in the width */
+    font-size: 16px;
+    resize: vertical;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #0b6fdaec;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #307bccbe;
+}
+
+/* --- RESULT DISPLAY --- */
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    border-left: 5px solid;
+    display: none; /* Hidden by default until prediction is made */
+}
+
+/* --- SPECIFIC PREDICTION STYLES --- */
+.spam {
+    background-color: #fddddd; /* Light red */
+    color: #a00000; /* Darker red text */
+    border-color: #a00000;
+}
+
+.ham {
+    background-color: #ddfdd9; /* Light green */
+    color: #006000; /* Darker green text */
+    border-color: #006000;
+}
