@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Email Spam Detector Demo</title>
-    <link rel="stylesheet" href="style.css"> 
+
+    <!-- Correct path for Flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <h1>Email Spam Detector</h1>
     <p>Paste the email content below and click Analyze:</p>
     
     <textarea id="email-text" placeholder="Paste your email here..."></textarea>
     <button onclick="analyzeEmail()">Analyze Email</button>
-    
+
     <div id="result"></div>
 
-    <script src="script.js"></script> 
+    <!-- Correct JS path -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
