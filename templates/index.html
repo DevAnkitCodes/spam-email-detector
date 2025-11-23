@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Spam Detector</title>
-
-    <!-- Correct Flask static path -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="/style.css">
 </head>
-
 <body>
-    <h1>Email Spam Detector</h1>
-    <p>Paste the email content below and click Analyze:</p>
 
-    <textarea id="email-text" placeholder="Paste your email here..."></textarea>
-    <button onclick="analyzeEmail()">Analyze Email</button>
+<div class="container">
+    <h1 class="title">⚡ Spam Email Detector ⚡</h1>
 
-    <div id="result"></div>
+    <p class="subtitle">Paste email text below and click Analyze</p>
 
-    <!-- Correct Flask static path -->
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <textarea id="email-text" placeholder="Type or paste the email content here..."></textarea>
+
+    <button onclick="analyzeEmail()" class="btn">Analyze Email</button>
+
+    <div id="result" class="result-box"></div>
+</div>
+
+<script src="/static/script.js"></script>
+
 </body>
 </html>
