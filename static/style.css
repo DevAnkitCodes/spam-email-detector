@@ -1,75 +1,115 @@
-/* style.css */
-
-/* --- GENERAL LAYOUT --- */
+/* ---------- GLOBAL STYLES ---------- */
 body {
-    font-family: 'Arial', sans-serif;
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
+    background: #000000;
+    font-family: "Courier New", monospace;
+    color: #00ff95;
+    padding: 0;
+    margin: 0;
+}
+
+/* Center main container */
+.container {
+    max-width: 600px;
+    background: rgba(0, 255, 149, 0.06);
+    border: 1px solid #2a805c;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    background-color: #f7f7f7;
+    padding: 25px;
+    margin: 40px auto;
+    box-shadow: 0 0 18px rgba(10, 214, 129, 0.15);
+    text-align: center;
 }
 
-h1 {
-    color: #db0719;
-    border-bottom: 2px solid #0056b3;
-    padding-bottom: 10px;
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .container {
+        margin: 15px;
+        padding: 18px;
+    }
 }
 
-p {
-    color: #555;
-}
-
-/* --- INPUTS & BUTTONS --- */
-textarea {
-    width: 100%;
-    height: 150px;
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box; /* Includes padding in the width */
-    font-size: 16px;
-    resize: vertical;
-}
-
-button {
-    padding: 12px 25px;
-    background-color: #0b6fdaec;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #307bccbe;
-}
-
-/* --- RESULT DISPLAY --- */
-#result {
-    margin-top: 30px;
-    padding: 20px;
-    border-radius: 8px;
+/* Title */
+.title {
+    font-size: 28px;
     font-weight: bold;
-    font-size: 18px;
-    border-left: 5px solid;
-    display: none; /* Hidden by default until prediction is made */
+    margin-bottom: 10px;
+    color: #12e784e5;
 }
 
-/* --- SPECIFIC PREDICTION STYLES --- */
+/* Subtitle */
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #22c08b;
+}
+
+/* Textarea */
+textarea {
+    width: 95%;
+    height: 180px;
+    background: #0a0a0a;
+    color: #c2cec9;
+    border: 2px solid #458d6f;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea:focus {
+    box-shadow: 0 0 10px #11422e;
+    border-color: #187e50;
+}
+
+/* Analyze Button */
+.btn {
+    display: block;
+    width: 80%;
+    max-width: 520px;
+    margin: 15px auto 0 auto;
+    padding: 10px 0;
+    background: #f1fff3;
+    border: none;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s, transform 0.15s;
+    -webkit-transition: background 0.2s, transform 0.15s;
+    -moz-transition: background 0.2s, transform 0.15s;
+    -ms-transition: background 0.2s, transform 0.15s;
+    -o-transition: background 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+    background: #0cce76;
+    box-shadow: 0 0 10px #26694d;
+    transform: translateY(-2px);
+}
+
+/* Result box (clean & simple) */
+.result-box {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    display: none;
+    text-align: left;
+}
+
+/* SPAM result */
 .spam {
-    background-color: #fddddd; /* Light red */
-    color: #a00000; /* Darker red text */
-    border-color: #a00000;
+    background-color: rgba(172, 71, 71, 0.20);
+    border-left: 4px solid #ff4444;
+    color: #ff5f5f;
 }
 
+/* HAM result */
 .ham {
-    background-color: #ddfdd9; /* Light green */
-    color: #006000; /* Darker green text */
-    border-color: #006000;
+    background-color: rgba(0, 255, 149, 0.20);
+    border-left: 4px solid #00ff95;
+    color: #11bb74;
 }
